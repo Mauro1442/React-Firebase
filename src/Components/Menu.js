@@ -8,8 +8,15 @@ function Menu(props) {
     <>
       <AuthContext.Consumer>
         {(context) => (
-          <Navbar bg="light" expand="lg">
+          <Navbar bg="warning" variant="light" expand="lg">
             <Navbar.Brand as={Link} to="/">
+              <img
+                alt=""
+                src="../logo512.png"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{" "}
               Digital Shop
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,7 +48,11 @@ function Menu(props) {
                 )}
               </Nav>
             </Navbar.Collapse>
-            {context.userLogin && <div>Hi {context?.userInfo?.name}! </div>}
+            {context.userLogin && (
+              <div>
+                <h5>Hi {context?.userInfo?.name}! </h5>
+              </div>
+            )}
           </Navbar>
         )}
       </AuthContext.Consumer>

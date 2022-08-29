@@ -2,6 +2,7 @@ import Home from "../Pages/Home";
 import Registro from "../Pages/Registro";
 import Login from "../Pages/Login";
 import Detalle from "../Pages/Detalle";
+import { ContactUs } from "../Components/ContactForm";
 import NotFound from "../Pages/NotFound";
 import ProductosAlta from "../Pages/ProductosAlta";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -16,6 +17,7 @@ function Public() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Navigate to="/" />} />
+            <Route path="/contact" element={<ContactUs />} />
             {!context.userLogin && (
               <>
                 <Route path="/alta" element={<Registro />} />

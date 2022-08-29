@@ -3,6 +3,7 @@ import Producto from "./Producto/index";
 import { getAllProductos } from "../Service/productosServices";
 import { Row } from "react-bootstrap";
 import Loading from "./Loading";
+import BCarousel from "./BCarousel";
 
 function Productos() {
   const [listadoProductos, setListadoProductos] = useState([]);
@@ -27,8 +28,13 @@ function Productos() {
   };
   return (
     <div>
-      <h1>Cameras</h1>
-      <input type="text" value={buscar} onChange={handleBuscar}></input>
+      <BCarousel />
+      <input
+        label="Search"
+        type="text"
+        value={buscar}
+        onChange={handleBuscar}
+      ></input>
       <Loading loading={loading}>
         {loading && <div>Cargando ...</div>}
         <div>

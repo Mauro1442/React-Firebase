@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import Loading from "../Components/Loading";
 import { useParams } from "react-router-dom";
 import { getByIdProductos } from "../Service/productosServices";
@@ -6,7 +8,9 @@ import { Button } from "react-bootstrap";
 
 const estiloDetalle = {
   img: {
-    width: "400px",
+    width: "100%",
+    maxWidth: "400px",
+    flex: 1,
   },
 };
 function Detalle() {
@@ -36,9 +40,15 @@ function Detalle() {
       <div>
         <h1>{producto?.name}</h1>
         <p>sku: {producto?.sku}</p>
+        <img style={estiloDetalle} alt="" src={producto?.thumbnail}></img>
         {producto.description && <p>Description: {producto.description}</p>}
         <p>Price: {producto?.price}</p>
-        <Button variant="warning" onClick={() => comprar(id)}>
+        <Button
+          as={Link}
+          to="/contact"
+          variant="warning"
+          onClick={() => comprar(id)}
+        >
           Place Order
         </Button>
         <div>
