@@ -1,13 +1,21 @@
 import { Card, Col } from "react-bootstrap";
 import Acciones from "./Acciones";
+import "./index.css";
 const styles = {
-  card: {
-    width: "18rem",
-    minHeight: "300px",
-    marginBottom: "20px",
-  },
   img: {
+    flex: 1,
+    maxWidth: "200px",
+    maxHeight: "200px",
+    alignSelf: "center",
+    justifySelf: "center",
+    grow: 1,
+  },
+  div: {
     width: "150px",
+    height: "150px",
+    flex: 1,
+    alignContent: "center",
+    flexDirection: "row",
   },
 };
 
@@ -21,11 +29,18 @@ function Producto(props) {
         <Card style={styles.card}>
           <Card.Body>
             <Card.Title>{nombre}</Card.Title>
-            <Card.Img variant="top" src={thumbnail} style={styles.img} />
-
-            <Card.Text>${precio} </Card.Text>
-            <Card.Text> sku: {sku} </Card.Text>
-            <Acciones id={id} />
+            <div className="cardbody">
+              <div className="chdiv">
+                <div style={styles.div}>
+                  <Card.Img variant="top" src={thumbnail} style={styles.img} />
+                </div>
+              </div>
+              <div className="chdiv">
+                <Card.Text>${precio} </Card.Text>
+                <Card.Text> sku: {sku} </Card.Text>
+                <Acciones id={id} />
+              </div>
+            </div>
           </Card.Body>
         </Card>
       </Col>

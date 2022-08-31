@@ -7,11 +7,9 @@ import { getByIdProductos } from "../Service/productosServices";
 import { Button } from "react-bootstrap";
 
 const estiloDetalle = {
-  img: {
-    width: "100%",
-    maxWidth: "400px",
-    flex: 1,
-  },
+  width: "100%",
+  maxWidth: "300px",
+  flexShrink: 3,
 };
 function Detalle() {
   const { id } = useParams();

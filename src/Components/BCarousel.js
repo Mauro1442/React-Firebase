@@ -2,12 +2,10 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 const divStyle = {
-  flexDirection: "row",
+  width: "100%",
 };
 const imgStyle = {
   maxHeight: "680px",
-
-  flex: 1,
 };
 
 export default function BCarousel() {
@@ -18,7 +16,7 @@ export default function BCarousel() {
           <img
             style={imgStyle}
             className="d-block w-100"
-            src="https://c4.wallpaperflare.com/wallpaper/159/645/247/blur-the-camera-lens-camera-wallpaper-preview.jpg"
+            src={require("../slide 1.jpg")}
             text="first"
             alt="First slide"
           />
@@ -31,7 +29,7 @@ export default function BCarousel() {
           <img
             style={imgStyle}
             className="d-block w-100"
-            src="https://c4.wallpaperflare.com/wallpaper/67/926/344/black-background-camera-technology-wallpaper-preview.jpg"
+            src={require("../slide 2.jpg")}
             alt="Second slide"
           />
 
@@ -44,7 +42,7 @@ export default function BCarousel() {
           <img
             style={imgStyle}
             className="d-block w-100"
-            src="https://wallpapercave.com/wp/wp7549565.jpg"
+            src={require("../slide 3.jpg")}
             alt="Third slide"
           />
 

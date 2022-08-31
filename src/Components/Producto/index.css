@@ -1,0 +1,33 @@
+div.card {
+  width: 18rem;
+  min-height: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 1px #808080;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+  .cardbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+  }
+  .chdiv {
+    display: inline-block;
+
+    display: flexbox;
+  }
+  div.card {
+    min-height: 200px;
+    margin-bottom: 0;
+    box-shadow: 0 0 0px 0px #808080;
+  }
+  .card-body {
+    max-height: 150px;
+  }
+}

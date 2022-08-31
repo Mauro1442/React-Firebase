@@ -29,9 +29,11 @@ function Productos() {
   return (
     <div>
       <BCarousel />
+      <h6 style={{ margin: "0.25rem" }}>Search by brand:</h6>
       <input
         label="Search"
         type="text"
+        style={{ margin: "0.25rem" }}
         value={buscar}
         onChange={handleBuscar}
       ></input>
