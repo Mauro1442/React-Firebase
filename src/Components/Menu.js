@@ -8,7 +8,12 @@ function Menu(props) {
     <>
       <AuthContext.Consumer>
         {(context) => (
-          <Navbar bg="warning" variant="light" expand="lg">
+          <Navbar
+            bg="warning"
+            variant="light"
+            expand="lg"
+            paddingLeft="0.25rem"
+          >
             <Navbar.Brand as={Link} to="/">
               <img
                 alt=""
@@ -16,7 +21,7 @@ function Menu(props) {
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
-              />{" "}
+              />
               Digital Shop
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

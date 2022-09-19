@@ -24,11 +24,13 @@ function Productos() {
   }, [buscar]);
   const handleBuscar = (event) => {
     const value = event.target.value;
-    setBuscar(value);
+    if (value.length <= 1) {
+      setBuscar(value.toUpperCase());
+    } else setBuscar(value[0].toUpperCase() + value.substring(1).toLowerCase());
   };
   return (
     <div>
-      <BCarousel />
+      {!buscar[0] && <BCarousel />}
       <h6 style={{ margin: "0.25rem" }}>Search by brand:</h6>
       <input
         label="Search"
